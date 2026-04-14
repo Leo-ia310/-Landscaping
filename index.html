@@ -1,1318 +1,758 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <!-- ============================================================
-    LANDSCAPING — Production Landing Page
-    Engineer: Senior Frontend / UX / CRO
-    Strategy:  Conversion-first, mobile-first, premium aesthetic
-    CRO Focus: Guide visitor → lead through progressive trust build
-  ============================================================ -->
-
-  <!-- Meta -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  <!-- SEO -->
-  <title>Landscaping | Luxury Outdoor Architecture — Los Angeles</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Landscaping| Outdoor Spaces That Increase Property Value</title>
   <meta name="description"
-    content="Premium architectural landscaping in Southern California. Custom decks, pergolas, masonry & hardscaping for Pasadena, Downey & Long Beach. Licensed. Insured. 15+ years. Request a free estimate today." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://ironwooddesign.com/" />
-
-  <!-- Open Graph (social sharing) -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Landscaping | Luxury Outdoor Architecture" />
-  <meta property="og:description"
-    content="Architectural hardscaping & structural timber for Southern California's finest homes. Starting at $25,000." />
-  <meta property="og:url" content="https://ironwooddesign.com/" />
-  <meta property="og:image" content="https://ironwooddesign.com/og-image.jpg" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Landscaping | Luxury Outdoor Architecture" />
-  <meta name="twitter:description" content="Architectural hardscaping & structural timber in Southern California." />
-
-  <!-- Fonts: preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    content=" Landscaping creates premium outdoor living spaces in California through design-led hardscaping, pergolas, decks and material-forward construction.">
+  <meta name="theme-color" content="#102017">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Manrope:wght@300;400;600;700;800&display=swap"
-    rel="stylesheet" />
-
-  <!-- Material Symbols (single load, no duplicate) -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    rel="stylesheet" />
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- Language Switcher Styles -->
-  <style>
-    body:not(.lang-es) .lang-es {
-      display: none !important;
-    }
-
-    body.lang-es .lang-en {
-      display: none !important;
-    }
-  </style>
-
-  <!-- Structured Data (Schema.org — Local Business) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    "name": "Landscaping",
-    "description": "Premium architectural landscaping in Southern California. Custom decks, pergolas, masonry & outdoor hardscaping.",
-    "url": "https://ironwooddesign.com",
-    "telephone": "+1-626-555-0100",
-    "priceRange": "$$$$ (starting at $25,000)",
-    "areaServed": ["Pasadena", "Downey", "Long Beach", "Los Angeles"],
-    "hasCredential": {
-      "@type": "EducationalOccupationalCredential",
-      "name": "California Licensed Contractor, $5M General Liability"
-    }
-  }
-  </script>
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="lang-es">
+<body class="lang-en">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <!-- ════════════════════════════════════════════════
-    NAVIGATION
-    CRO: fixed nav keeps CTA accessible at all times
-  ════════════════════════════════════════════════ -->
-  <nav class="nav" id="main-nav" role="navigation" aria-label="Primary navigation">
-    <div class="nav__inner">
-
-      <!-- Logo -->
-      <a href="#" class="nav__logo" aria-label="Landscaping — Back to top">
-        LANDSCAPING
+  <header class="site-header" id="top">
+    <div class="container header-shell">
+      <a class="brand" href="#top" aria-label=" Landscaping home">
+        <span class="brand__name"> Landscaping</span>
+        <span class="brand__tag">Premium Outdoor Construction</span>
       </a>
 
-      <!-- Desktop Links -->
-      <ul class="nav__links" role="list">
-        <li><a href="#process" class="nav__link"><span class="lang-en">Process</span><span
-              class="lang-es">Metodología</span></a></li>
-        <li><a href="#gallery" class="nav__link"><span class="lang-en">Gallery</span><span
-              class="lang-es">Portafolio</span></a></li>
-        <li><a href="#faq" class="nav__link"><span class="lang-en">FAQ</span><span class="lang-es">Preguntas</span></a>
-        </li>
-      </ul>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
 
-      <!-- Desktop Actions -->
-      <div class="nav__actions">
-        <!-- Language Switcher -->
-        <button class="nav__lang-toggle" aria-label="Cambiar idioma">
-          <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 1.2rem;">language</span>
-          <span class="nav__lang-text">ES</span>
-        </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
 
-        <!-- Desktop CTA -->
-        <a href="#estimate" class="nav__cta btn btn--dark" id="nav-cta">
-          <span class="lang-en">Request Free Estimate</span><span class="lang-es">Solicitar Estimación Gratuita</span>
+        <a href="#renders"><span class="lang-en">Renders</span><span class="lang-es">Renders</span></a>
+        <a href="#gallery"><span class="lang-en">Projects</span><span class="lang-es">Proyectos</span></a>
+        <a href="#estimate"><span class="lang-en">Quote</span><span class="lang-es">Cotizar</span></a>
+        <div class="lang-switcher" aria-label="Language switcher">
+          <button type="button" class="lang-switcher__btn is-active" data-lang-switch="en">EN</button>
+          <button type="button" class="lang-switcher__btn" data-lang-switch="es">ES</button>
+        </div>
+        <a class="button button--sm button--primary header-cta" href="#estimate" data-track="ironwood_cta_click">
+          <span class="lang-en">Get Your Project Quote</span>
+          <span class="lang-es">Obten tu cotizacion</span>
         </a>
-      </div>
-
-      <!-- Mobile toggle -->
-      <button class="nav__toggle" id="mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false"
-        aria-controls="mobile-drawer">
-        <span class="material-symbols-outlined" aria-hidden="true">menu</span>
-      </button>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- Mobile Drawer Overlay -->
-  <div class="nav__overlay" id="nav-overlay" aria-hidden="true"></div>
+  <a class="mobile-sticky-cta" href="#estimate" data-track="ironwood_cta_click">
+    <span class="lang-en">Get Your Project Quote</span>
+    <span class="lang-es">Obten tu cotizacion</span>
+  </a>
 
-  <!-- Mobile Drawer -->
-  <nav class="nav__drawer" id="mobile-drawer" aria-label="Mobile navigation" aria-hidden="true">
-    <button class="nav__drawer-close" id="mobile-menu-close" aria-label="Close navigation menu">
-      <span class="material-symbols-outlined" aria-hidden="true">close</span>
-    </button>
-
-    <ul class="nav__drawer-links" role="list">
-      <li><a href="#process" class="nav__link"><span class="lang-en">Process</span><span
-            class="lang-es">Metodología</span></a></li>
-      <li><a href="#gallery" class="nav__link"><span class="lang-en">Gallery</span><span
-            class="lang-es">Portafolio</span></a></li>
-      <li><a href="#faq" class="nav__link"><span class="lang-en">FAQ</span><span class="lang-es">Preguntas</span></a>
-      </li>
-    </ul>
-
-    <div
-      style="display: flex; gap: 1rem; align-items: center; justify-content: flex-start; margin-top: auto; padding-top: 1rem;">
-      <button class="nav__lang-toggle" aria-label="Cambiar idioma">
-        <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 1.2rem;">language</span>
-        <span class="nav__lang-text">ES</span>
-      </button>
-    </div>
-
-    <a href="#estimate" class="nav__cta btn btn--dark" style="margin-top: 1rem;">
-      <span class="lang-en">Request Free Estimate</span><span class="lang-es">Solicitar Estimación Gratuita</span>
-    </a>
-  </nav>
-
-  <!-- ════════════════════════════════════════════════
-    MAIN CONTENT
-  ════════════════════════════════════════════════ -->
   <main id="main-content">
+    <!-- Conversion intent: immediate value, trust, and a clear first action above the fold. -->
+    <section class="hero section section--hero">
+      <div class="hero__media" aria-hidden="true">
+        <img src="Hero.png" alt="Modern pergola and premium deck surrounded by lush landscape" width="1584" height="666"
+          fetchpriority="high">
+        <div class="hero__veil"></div>
 
-    <!-- ───────────────────────────────────────────────
-      1. HERO
-    ─────────────────────────────────────────────── -->
-    <section class="hero" aria-labelledby="hero-title">
-
-      <div class="hero__bg">
-        <img src="Hero.png"
-          alt="Custom cedar deck and slate pavers overlooking a sunset California landscape — Landscaping"
-          class="hero__img" fetchpriority="high" width="2000" height="1125" />
-        <div class="hero__overlay" aria-hidden="true"></div>
       </div>
 
-      <div class="container">
+      <div class="container hero__grid">
         <div class="hero__content">
-          <span class="hero__overline overline">
-          </span>
 
-          <h1 class="hero__title" id="hero-title">
-            <span class="lang-en">Building your<br />outdoor sanctuary.</span>
-            <span class="lang-es">Construyendo tu<br />santuario exterior.</span>
+
+          <h1 class="hero__title">
+            <span class="lang-en">Increases property equity through high-end construction.</span>
+            <span class="lang-es">Aumenta el valor de tu propiedad con construccion premium.</span>
           </h1>
 
           <p class="hero__subtitle">
-            <span class="lang-en">High-end hardscaping, structural timber, and custom masonry for Southern California's
-              finest homes. Starting at $25,000.</span>
-            <span class="lang-es">Hardscaping de alto nivel, madera estructural y mampostería a medida para las mejores
-              casas del sur de California. A partir de $25,000.</span>
+            <span class="lang-en">We build outdoor spaces that raise home value and quality of life.</span>
+            <span class="lang-es">Creamos espacios exteriores que elevan el valor de tu casa y tu calidad de
+              vida.</span>
           </p>
 
           <div class="hero__actions">
-            <a href="#estimate" class="btn btn--primary" id="hero-cta-primary">
-              <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
-              <span class="lang-en">Request Free Estimate</span><span class="lang-es">Solicitar Estimación
-                Gratuita</span>
+            <a class="button button--primary button--xl" href="#estimate" data-track="ironwood_cta_click">
+              <span class="lang-en">Get Your Personalized Project Quote Today</span>
+              <span class="lang-es">Obten hoy tu cotizacion personalizada</span>
             </a>
-            <a href="#gallery" class="btn btn--outline" id="hero-cta-secondary">
-              <span class="lang-en">View Recent Projects</span><span class="lang-es">Ver Proyectos Recientes</span>
+
+            <a class="button button--ghost button--xl" href="#renders">
+              <span class="lang-en">View Renders</span>
+              <span class="lang-es">Ver renders</span>
             </a>
           </div>
-        </div>
-      </div>
 
-      <div class="hero__scroll-hint" aria-hidden="true">
-        <span><span class="lang-en">Discover</span><span class="lang-es">Descubrir</span></span>
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 5v14M5 12l7 7 7-7" />
-        </svg>
+
+        </div>
+
       </div>
     </section>
 
-    <!-- ───────────────────────────────────────────────
-      TRUST BAR
-    ─────────────────────────────────────────────── -->
-    <div class="trust-bar" aria-label="Credibility indicators">
-      <div class="trust-bar__inner">
-        <div class="trust-item reveal">
-          <span class="material-symbols-outlined trust-item__icon" aria-hidden="true">verified</span>
-          <span class="trust-item__text">
-            <span class="lang-en">Licensed & Bonded</span><span class="lang-es">Licenciados y Afianzados</span>
-          </span>
-        </div>
-        <div class="trust-item reveal reveal-delay-1">
-          <span class="material-symbols-outlined trust-item__icon" aria-hidden="true">shield</span>
-          <span class="trust-item__text">
-            <span class="lang-en">$5M Liability Insurance</span><span class="lang-es">Seguro de Responsabilidad de
-              $5M</span>
-          </span>
-        </div>
-        <div class="trust-item reveal reveal-delay-2">
-          <span class="material-symbols-outlined trust-item__icon" aria-hidden="true">workspace_premium</span>
-          <span class="trust-item__text">
-            <span class="lang-en">15+ Years Experience</span><span class="lang-es">Más de 15 Años de Experiencia</span>
-          </span>
-        </div>
-        <div class="trust-item reveal reveal-delay-3">
-          <span class="material-symbols-outlined trust-item__icon" aria-hidden="true">handshake</span>
-          <span class="trust-item__text">
-            <span class="lang-en">400+ Completed Projects</span><span class="lang-es">Más de 400 Proyectos
-              Completados</span>
-          </span>
-        </div>
-      </div>
-    </div>
+    <!-- Conversion intent: quickly filter out maintenance requests and position the premium offer correctly. -->
 
-    <!-- ───────────────────────────────────────────────
-      2. VALUE PROPOSITION
-    ─────────────────────────────────────────────── -->
-    <section class="value-split" aria-labelledby="value-title">
-      <div class="value-split__inner">
 
-        <div class="value-split__image">
-          <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuADxZkzFrgSwAPtueFP0vJPOh63DvvwEaKsJ4vkJiTE7x7C3ycoUoVSRUaK8UZRDAzzx1WRHj4y0bdDT7F9dQrwr6uERXQuG4lQyme3RxV_Bft_Pxvtsg3HVAauRb1T2wET08Vu1106P-hbEBwQ2vFX6IsMdicfTKPDGdG8vonWcjzsFKTYauxx_QVT01YbzbdDKTNJvpt_v1U8BIQ8oqOlGZLTCod9o4AWe_ulXtlz7vTEHrCrXYZwzlyCj8QUSftkJUJ2GYob5cw6"
-            alt="Premium dark slate masonry meeting a warm cedar beam — architectural detailing by Landscaping"
-            loading="lazy" width="1200" height="900" />
-        </div>
-
-        <div class="value-split__body">
-          <span class="section-label" style="color: var(--color-tertiary);">
-            <span class="lang-en">Beyond Landscaping</span><span class="lang-es">Más allá del Paisajismo</span>
-          </span>
-          <h2 class="value-split__title" id="value-title">
-            <span class="lang-en">Architectural<br />Elevation.</span><span
-              class="lang-es">Elevación<br />Arquitectónica.</span>
-          </h2>
-          <p class="value-split__description">
-            <span class="lang-en">We don't just plant — we curate. Landscaping treats every square inch of your
-              property as a structural extension of your home's identity. Our work increases resale value through
-              permanent, high-end hardscaping and precision structural timber.</span>
-            <span class="lang-es">No solo plantamos, curamos. Landscaping aborda cada pulgada cuadrada de su
-              propiedad como una extensión estructural de la identidad intrínseca de su hogar. Nuestro trabajo
-              incrementa el valor de la propiedad a través de hardscaping permanente de alta gama y madera estructural
-              de precisión.</span>
-          </p>
-
-          <ul class="value-features" role="list">
-            <li class="value-feature reveal">
-              <span class="material-symbols-outlined value-feature__icon" aria-hidden="true">architecture</span>
-              <div>
-                <p class="value-feature__title"><span class="lang-en">Built to Last Decades</span><span
-                    class="lang-es">Construido para Durar Décadas</span></p>
-                <p class="value-feature__desc"><span class="lang-en">Master craftsmanship using premium raw materials
-                    sourced for longevity.</span><span class="lang-es">Fabricación de maestría artesanal utilizando
-                    materias primas premium seleccionadas por su longevidad.</span></p>
-              </div>
-            </li>
-            <li class="value-feature reveal reveal-delay-1">
-              <span class="material-symbols-outlined value-feature__icon" aria-hidden="true">trending_up</span>
-              <div>
-                <p class="value-feature__title"><span class="lang-en">Asset Appreciation</span><span
-                    class="lang-es">Apreciación del Activo</span></p>
-                <p class="value-feature__desc"><span class="lang-en">Strategic exterior upgrades that maximize your
-                    property's resale equity.</span><span class="lang-es">Mejoras exteriores estratégicas que maximizan
-                    el capital inmobiliario de su propiedad.</span></p>
-              </div>
-            </li>
-            <li class="value-feature reveal reveal-delay-2">
-              <span class="material-symbols-outlined value-feature__icon" aria-hidden="true">gavel</span>
-              <div>
-                <p class="value-feature__title"><span class="lang-en">Permit Management Included</span><span
-                    class="lang-es">Gestión de Permisos Incluida</span></p>
-                <p class="value-feature__desc"><span class="lang-en">Turn-key service — we handle all city submittals
-                    and zoning compliance.</span><span class="lang-es">Servicio llave en mano: manejamos todas las
-                    gestiones y permisos de la ciudad y el cumplimiento de zonificación.</span></p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ───────────────────────────────────────────────
-      3. PROCESS
-    ─────────────────────────────────────────────── -->
-    <section class="process" id="process" aria-labelledby="process-title">
-      <div class="process__container">
-        <header class="process__header reveal">
-          <span class="process__overline overline">
-            <span class="lang-en">Our Workflow</span><span class="lang-es">Nuestro Flujo de Trabajo</span>
-          </span>
-          <h2 class="process__title" id="process-title">
-            <span class="lang-en">The Landscaping Method</span><span class="lang-es">El Método Landscaping</span>
-          </h2>
-        </header>
-
-        <div class="process__grid" role="list">
-
-          <article class="process-step reveal" role="listitem">
-            <span class="process-step__number" aria-hidden="true">01</span>
-            <h3 class="process-step__title"><span class="lang-en">Consultation</span><span class="lang-es">Consulta
-                Crítica</span></h3>
-            <p class="process-step__desc">
-              <span class="lang-en">An on-site visit to understand light, elevation, lifestyle, and the architectural
-                language of your property.</span>
-              <span class="lang-es">Una visita in-situ para comprender la luz natural, topografía, su estilo de vida y
-                el lenguaje arquitectónico de su propiedad.</span>
-            </p>
-          </article>
-
-          <article class="process-step reveal reveal-delay-1" role="listitem">
-            <span class="process-step__number" aria-hidden="true">02</span>
-            <h3 class="process-step__title"><span class="lang-en">3D Design</span><span class="lang-es">Diseño 3D
-                Paramétrico</span></h3>
-            <p class="process-step__desc">
-              <span class="lang-en">Full spatial rendering including material selection, lighting plans, and structural
-                specifications — before a single nail.</span>
-              <span class="lang-es">Renderizado espacial inmersivo incluyendo la selección íntegra de materiales, planos
-                de iluminación y viabilidad estructural.</span>
-            </p>
-          </article>
-
-          <article class="process-step reveal reveal-delay-2" role="listitem">
-            <span class="process-step__number" aria-hidden="true">03</span>
-            <h3 class="process-step__title"><span class="lang-en">Construction</span><span class="lang-es">Construcción
-                y Acabados</span></h3>
-            <p class="process-step__desc">
-              <span class="lang-en">Our master craftsmen execute each phase with obsessive attention to detail and
-                premium raw materials.</span>
-              <span class="lang-es">Nuestros maestros artesanos ejecutan cada fase con atención obsesiva y extrema al
-                detalle utilizando materias de calidad suprema.</span>
-            </p>
-          </article>
-
-          <article class="process-step reveal reveal-delay-3" role="listitem">
-            <span class="process-step__number" aria-hidden="true">04</span>
-            <h3 class="process-step__title"><span class="lang-en">Delivery</span><span class="lang-es">Entrega y
-                Cuidado</span></h3>
-            <p class="process-step__desc">
-              <span class="lang-en">Final detailing, client walkthrough, and long-term care guidelines. Your 5-year
-                structural warranty begins here.</span>
-              <span class="lang-es">Detalle final, inspección minuciosa con el cliente y pautas de mantenimiento a largo
-                plazo. Aquí inicia su garantía de 5 años.</span>
-            </p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ───────────────────────────────────────────────
-      4. GALLERY
-    ─────────────────────────────────────────────── -->
-    <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+    <!-- Conversion intent: render cards bridge imagination and purchasing by making the future project tangible. -->
+    <section class="section renders" id="renders">
       <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow"><span class="lang-en">Render directions</span><span class="lang-es">Renders de
+              referencia</span></p>
+          <h2><span class="lang-en">Minimal visual previews.</span><span class="lang-es">Previews visuales y
+              directos.</span></h2>
+        </div>
 
-        <header class="gallery__header">
-          <h2 class="gallery__title" id="gallery-title">
-            <span class="lang-en">Selected Works</span><span class="lang-es">Obras Seleccionadas</span>
-          </h2>
-          <a href="#" class="gallery__link" aria-label="View all projects">
-            <span class="lang-en">View All Projects →</span><span class="lang-es">Ver Todos los Proyectos →</span>
-          </a>
-        </header>
+        <div class="render-grid">
+          <article class="render-card">
+            <div class="render-card__image">
+              <img src="Hero.png" alt="Concept render of a dark pergola and premium deck" width="1584" height="666"
+                loading="lazy" decoding="async">
+            </div>
+            <div class="render-card__body">
+              <p class="render-card__label">Render 01</p>
+              <h3><span class="lang-en">Charcoal Pergola</span><span class="lang-es">Pergola charcoal</span></h3>
+              <ul class="render-card__details">
+                <li>
+                  <strong class="lang-en">Description:</strong><strong class="lang-es">Descripcion:</strong>
+                  <span class="lang-en">Shade-first retreat.</span><span class="lang-es">Refugio enfocado en
+                    sombra.</span>
+                </li>
+                <li>
+                  <strong class="lang-en">Materials:</strong><strong class="lang-es">Materiales:</strong>
+                  <span class="lang-en">Metal, deck, river rock.</span><span class="lang-es">Metal, deck, piedra de
+                    rio.</span>
+                </li>
+                <li>
+                  <strong class="lang-en">Savings:</strong><strong class="lang-es">Ahorro:</strong>
+                  <span class="lang-en">Fewer changes in build.</span><span class="lang-es">Menos cambios en
+                    obra.</span>
+                </li>
+              </ul>
+              <blockquote class="render-card__quote">
+                <span class="lang-en">"Our Sunday mornings finally feel peaceful."</span>
+                <span class="lang-es">"Nuestras mañanas de domingo finalmente se sienten tranquilas."</span>
+              </blockquote>
+            </div>
+          </article>
 
-        <div class="gallery__grid">
-          <figure class="gallery__item gallery__item--wide reveal">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuADwaam_qjD0X--HAwk_hZQog8AvasQ3TN3a6x9-IHaLBRLcOzfYZBmp4TCcMk6v-c_k6YzuwPDdLnV_haSyE5_lGGYt2sH7nldcaZZbb7IhJZJoVhimZKg4iztRvaIvYityogVmJetdCl8f0B_qrrBCeG-Pkr2pDf2IJJF9T8AdGIW1SP-DoukUHYI08jgBOUcmOqztZx8cImIz37pQQidfSdKaAIQVzdpM00UOLrlaMliG7ppz5Lur_iwYJiL2hFXcvgI_CrcyiNj"
-              alt="The Pasadena Pavilion" loading="lazy" width="1200" height="675" />
-            <figcaption class="gallery__caption">The Pasadena Pavilion</figcaption>
-          </figure>
+          <article class="render-card">
+            <div class="render-card__image">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuASeoRV-u2RUwK1mPC_jc4-2XO_8ruBF05uu6r0hjhT4L-UoE9aDFpciaXCSreLUQvN4BtVQ-ZOT4fJvoiS4Sh_oj1RBEYrfyOR2C51DKhVzKHF5zk32NRIGL-PAsHzDt4gs8cnuC-tZPLMLLk2gaHBqf0CCpuUDC5qymNZrAQ2yJWe81j7R9-cBlAoqGsp4cEa3-NrZAUJVErVPQR4C6_Ts46iK2Fzj1AMyUbs-G0Ifu-va9X7k0Lq02Jy1qNpiPWrVP1CtM_OsuLJ"
+                alt="Concept direction for a pergola and outdoor kitchen" width="1200" height="1200" loading="lazy"
+                decoding="async">
+            </div>
+            <div class="render-card__body">
+              <p class="render-card__label">Render 02</p>
+              <h3><span class="lang-en">Outdoor Kitchen</span><span class="lang-es">Cocina exterior</span></h3>
+              <ul class="render-card__details">
+                <li>
+                  <strong class="lang-en">Description:</strong><strong class="lang-es">Descripcion:</strong>
+                  <span class="lang-en">Entertaining-first concept.</span><span class="lang-es">Concepto enfocado en
+                    entretenimiento.</span>
+                </li>
+                <li>
+                  <strong class="lang-en">Materials:</strong><strong class="lang-es">Materiales:</strong>
+                  <span class="lang-en">Black frame, porcelain, pavers.</span><span class="lang-es">Estructura negra,
+                    porcelana, pavers.</span>
+                </li>
+                <li>
+                  <strong class="lang-en">Savings:</strong><strong class="lang-es">Ahorro:</strong>
+                  <span class="lang-en">Faster approvals.</span><span class="lang-es">Aprobaciones mas rapidas.</span>
+                </li>
+              </ul>
+              <blockquote class="render-card__quote">
+                <span class="lang-en">"The kids love being outside now."</span>
+                <span class="lang-es">"A los niños les encanta estar afuera ahora."</span>
+              </blockquote>
+            </div>
+          </article>
 
-          <figure class="gallery__item reveal reveal-delay-1">
+          <article class="render-card">
+            <div class="render-card__image">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVLYXCe4k8hmWmId_VQosticgEMmnH-0b9jYyOe9oTpzgpPWDqfawqxnIz9IpynVbtQL8Ey_vlGTRBT9sPFHE8Bo4rjGezHeIMHBiCPpWVItxVe52D2QaQejblFGEpiVUTYsokw_7tv_dL7NWSlooFQRT9aZ00z2rqy1Tw94a9jpGEGQBVBpHlBkkX5iT0Mqvr5Vz7e9FFKrHPHwIOGcUqUtkLZppXR6mS2SyFcxHtQ0y365MCUwbQh9HfTNm9b5XOpxC1ArR-SZ9q"
+                alt="Concept direction for a poolside hardscape transformation" width="1600" height="1000"
+                loading="lazy" decoding="async">
+            </div>
+            <div class="render-card__body">
+              <p class="render-card__label">Render 03</p>
+              <h3><span class="lang-en">Poolside Upgrade</span><span class="lang-es">Upgrade de piscina</span></h3>
+              <ul class="render-card__details">
+                <li>
+                  <strong class="lang-en">Description:</strong><strong class="lang-es">Descripcion:</strong>
+                  <span class="lang-en">Resort-style preview.</span><span class="lang-es">Preview estilo resort.</span>
+                </li>
+                <li>
+                  <strong class="lang-en">Materials:</strong><strong class="lang-es">Materiales:</strong>
+                  <span class="lang-en">Large pavers, wood, warm light.</span><span class="lang-es">Pavers grandes,
+                    madera, luz calida.</span>
+                </li>
+                <li>
+                  <strong class="lang-en">Savings:</strong><strong class="lang-es">Ahorro:</strong>
+                  <span class="lang-en">Cleaner quantities and scope.</span><span class="lang-es">Cantidades y alcance
+                    mas claros.</span>
+                </li>
+              </ul>
+              <blockquote class="render-card__quote">
+                <span class="lang-en">"This is where we actually disconnect."</span>
+                <span class="lang-es">"Aquí es donde realmente nos desconectamos."</span>
+              </blockquote>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conversion intent: built-work proof reinforces trust after the render section makes the vision feel achievable. -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow"><span class="lang-en">Built work</span><span class="lang-es">Trabajo construido</span></p>
+          <h2><span class="lang-en">Proof with less talking.</span><span class="lang-es">Prueba visual con menos
+              texto.</span></h2>
+        </div>
+
+        <div class="gallery-grid">
+          <button class="gallery-card gallery-card--wide" type="button" data-gallery-card data-title="Pasadena Pavilion"
+            data-subtitle="Pergola, deck and circulation / Pergola, deck y circulacion"
+            data-story="Clearer shade and gathering flow. / Mejor sombra y mejor flujo social."
+            data-before="Loose layout. / Layout suelto." data-after="Defined outdoor room. / Espacio exterior definido."
+            data-image="Hero.png">
+            <img src="Hero.png" alt="Modern pergola project in a landscaped backyard" width="1584" height="666"
+              loading="lazy" decoding="async">
+            <span class="gallery-card__overlay">
+              <strong>Pasadena Pavilion</strong>
+              <small><span class="lang-en">Pergola, deck and circulation upgrade</span><span class="lang-es">Pergola,
+                  deck y circulacion</span></small>
+            </span>
+          </button>
+
+          <button class="gallery-card" type="button" data-gallery-card data-title="Blackwater Pergola"
+            data-subtitle="Outdoor kitchen + shade / Cocina exterior + sombra"
+            data-story="Built for hosting with better flow. / Pensado para recibir con mejor flujo."
+            data-before="Weak anchor point. / Punto focal debil."
+            data-after="Cleaner social layout. / Layout social mas claro."
+            data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuASeoRV-u2RUwK1mPC_jc4-2XO_8ruBF05uu6r0hjhT4L-UoE9aDFpciaXCSreLUQvN4BtVQ-ZOT4fJvoiS4Sh_oj1RBEYrfyOR2C51DKhVzKHF5zk32NRIGL-PAsHzDt4gs8cnuC-tZPLMLLk2gaHBqf0CCpuUDC5qymNZrAQ2yJWe81j7R9-cBlAoqGsp4cEa3-NrZAUJVErVPQR4C6_Ts46iK2Fzj1AMyUbs-G0Ifu-va9X7k0Lq02Jy1qNpiPWrVP1CtM_OsuLJ">
             <img
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuASeoRV-u2RUwK1mPC_jc4-2XO_8ruBF05uu6r0hjhT4L-UoE9aDFpciaXCSreLUQvN4BtVQ-ZOT4fJvoiS4Sh_oj1RBEYrfyOR2C51DKhVzKHF5zk32NRIGL-PAsHzDt4gs8cnuC-tZPLMLLk2gaHBqf0CCpuUDC5qymNZrAQ2yJWe81j7R9-cBlAoqGsp4cEa3-NrZAUJVErVPQR4C6_Ts46iK2Fzj1AMyUbs-G0Ifu-va9X7k0Lq02Jy1qNpiPWrVP1CtM_OsuLJ"
-              alt="Blackwater Pergola" loading="lazy" width="600" height="600" />
-            <figcaption class="gallery__caption">Blackwater Pergola</figcaption>
-          </figure>
+              alt="Black pergola over an outdoor kitchen" width="1200" height="1200" loading="lazy" decoding="async">
+            <span class="gallery-card__overlay">
+              <strong>Blackwater Pergola</strong>
+              <small><span class="lang-en">Outdoor kitchen + shade structure</span><span class="lang-es">Cocina exterior
+                  + sombra</span></small>
+            </span>
+          </button>
 
-          <figure class="gallery__item reveal reveal-delay-2">
+          <button class="gallery-card gallery-card--tall" type="button" data-gallery-card
+            data-title="Heritage Slate Paths" data-subtitle="Texture-led hardscape / Hardscape con textura"
+            data-story="Stone becomes part of the sale. / La piedra se vuelve parte de la venta."
+            data-before="Broken path rhythm. / Ritmo fragmentado."
+            data-after="Cleaner circulation. / Circulacion mas limpia."
+            data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuCs3oifUsx_lkRbOqy3NBUXIE3DQ-KSJ6fnJ92CAKyHuTjs-mSNJc6r2jewp0ANtr2qq2X5EedUoVUEgypYyA_dXX4BP1Pad0jBkT6zZN99ShunjejIy9Xuf4IqpVkmmva4XHOW-zdGBwxOmm7C5RTM3R2UviwEP5GVGLa4QT6CMfZybDXWId6DM0p2Gi_HrtCh_Jh39yG6Gg5aqqW_YQeCFSNT09mJIjQ_9N6gAWZY64OhInbNW6w2CRQXVrrx_F-_1xgpW01e6VEP">
             <img
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs3oifUsx_lkRbOqy3NBUXIE3DQ-KSJ6fnJ92CAKyHuTjs-mSNJc6r2jewp0ANtr2qq2X5EedUoVUEgypYyA_dXX4BP1Pad0jBkT6zZN99ShunjejIy9Xuf4IqpVkmmva4XHOW-zdGBwxOmm7C5RTM3R2UviwEP5GVGLa4QT6CMfZybDXWId6DM0p2Gi_HrtCh_Jh39yG6Gg5aqqW_YQeCFSNT09mJIjQ_9N6gAWZY64OhInbNW6w2CRQXVrrx_F-_1xgpW01e6VEP"
-              alt="Heritage Slate Paths" loading="lazy" width="600" height="600" />
-            <figcaption class="gallery__caption">Heritage Slate Paths</figcaption>
-          </figure>
+              alt="Slate paving detail" width="1200" height="1200" loading="lazy" decoding="async">
+            <span class="gallery-card__overlay">
+              <strong>Heritage Slate Paths</strong>
+              <small><span class="lang-en">Texture-driven hardscape language</span><span class="lang-es">Lenguaje de
+                  hardscape</span></small>
+            </span>
+          </button>
 
-          <figure class="gallery__item gallery__item--wide reveal">
+          <button class="gallery-card gallery-card--wide" type="button" data-gallery-card
+            data-title="Long Beach Retreat" data-subtitle="Poolside refinement / Refinamiento de piscina"
+            data-story="A sharper resort-style feel. / Una sensacion mas resort y premium."
+            data-before="Basic backyard feel. / Sensacion basica."
+            data-after="Premium leisure zone. / Zona premium de descanso."
+            data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuCVLYXCe4k8hmWmId_VQosticgEMmnH-0b9jYyOe9oTpzgpPWDqfawqxnIz9IpynVbtQL8Ey_vlGTRBT9sPFHE8Bo4rjGezHeIMHBiCPpWVItxVe52D2QaQejblFGEpiVUTYsokw_7tv_dL7NWSlooFQRT9aZ00z2rqy1Tw94a9jpGEGQBVBpHlBkkX5iT0Mqvr5Vz7e9FFKrHPHwIOGcUqUtkLZppXR6mS2SyFcxHtQ0y365MCUwbQh9HfTNm9b5XOpxC1ArR-SZ9q">
             <img
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVLYXCe4k8hmWmId_VQosticgEMmnH-0b9jYyOe9oTpzgpPWDqfawqxnIz9IpynVbtQL8Ey_vlGTRBT9sPFHE8Bo4rjGezHeIMHBiCPpWVItxVe52D2QaQejblFGEpiVUTYsokw_7tv_dL7NWSlooFQRT9aZ00z2rqy1Tw94a9jpGEGQBVBpHlBkkX5iT0Mqvr5Vz7e9FFKrHPHwIOGcUqUtkLZppXR6mS2SyFcxHtQ0y365MCUwbQh9HfTNm9b5XOpxC1ArR-SZ9q"
-              alt="Long Beach Retreat" loading="lazy" width="1200" height="675" />
-            <figcaption class="gallery__caption">Long Beach Retreat</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ───────────────────────────────────────────────
-      5. AUTHORITY STATS
-    ─────────────────────────────────────────────── -->
-    <section class="authority" aria-labelledby="authority-title">
-      <div class="container">
-        <div class="authority__inner">
-          <div class="authority__copy reveal">
-            <h2 class="authority__title" id="authority-title">
-              <span class="lang-en">Fully Bonded & Licensed<br />Master Builders.</span>
-              <span class="lang-es">Maestros Constructores Totalmente<br />Licenciados y Afianzados.</span>
-            </h2>
-            <p>
-              <span class="lang-en">We carry comprehensive $5M general liability insurance and specialized licensing for
-                structural wood and masonry. Every project is executed to California's strictest building codes, with
-                full permit management from submittal to final inspection.</span>
-              <span class="lang-es">Contamos con un seguro integral de responsabilidad civil general de $5M y licencias
-                especializadas para madera estructural y mampostería. Cada proyecto se ejecuta siguiendo los códigos de
-                construcción más estrictos de California, con gestión completa de permisos desde la presentación hasta
-                la inspección final.</span>
-            </p>
-          </div>
-
-          <div class="authority__stats reveal reveal-delay-1">
-            <div class="stat-card">
-              <span class="stat-card__value">15+</span>
-              <span class="stat-card__label"><span class="lang-en">Years Experience</span><span class="lang-es">Años de
-                  Experiencia</span></span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-card__value">400+</span>
-              <span class="stat-card__label"><span class="lang-en">Commissions</span><span class="lang-es">Proyectos
-                  Entregados</span></span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-card__value">5yr</span>
-              <span class="stat-card__label"><span class="lang-en">Structural Warranty</span><span
-                  class="lang-es">Garantía Estructural</span></span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-card__value">$5M</span>
-              <span class="stat-card__label"><span class="lang-en">Liability Insurance</span><span
-                  class="lang-es">Seguro de Obra</span></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ───────────────────────────────────────────────
-      6. TESTIMONIALS
-    ─────────────────────────────────────────────── -->
-    <section class="testimonials" aria-labelledby="testimonials-title">
-      <div class="container">
-        <header class="testimonials__header reveal">
-          <span class="testimonials__overline overline">
-            <span class="lang-en">Client Voices</span><span class="lang-es">Voces de Clientes</span>
-          </span>
-          <h2 class="testimonials__title" id="testimonials-title">
-            <span class="lang-en">What Our Clients Say</span><span class="lang-es">Testimonios Comprobados</span>
-          </h2>
-        </header>
-
-        <div class="testimonials__grid">
-
-          <article class="testimonial-card reveal">
-            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="testimonial-card__quote">
-              <span class="lang-en">"Landscaping didn't just build us a deck — they transformed our backyard into an
-                extension of our home. The attention to the cedar joinery is extraordinary. Every neighbor asks who did
-                it."</span>
-              <span class="lang-es">"Landscaping no solo nos construyó un deck — transformaron nuestro patio trasero en
-                una extensión elegante de nuestra casa. La atención a la ebanistería de cedro es extraordinaria. Todos
-                los vecinos preguntan quién lo hizo."</span>
-            </p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">MA</div>
-              <div>
-                <p class="testimonial-card__name">Michael & Andrea P.</p>
-                <p class="testimonial-card__detail">
-                  <span class="lang-en">Pasadena, CA · Custom Deck + Pergola</span>
-                  <span class="lang-es">Pasadena, CA · Deck a Medida + Pérgola</span>
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <article class="testimonial-card reveal reveal-delay-1">
-            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="testimonial-card__quote">
-              <span class="lang-en">"The 3D design phase alone was worth it. We got to see our full backyard before a
-                single stone was laid. The final result was even better than the render. Completely turn-key."</span>
-              <span class="lang-es">"Solo la fase de diseño 3D valió cada centavo. Pudimos ver nuestro patio completo
-                antes de colocar una sola piedra. El resultado final fue incluso mejor que el render original.
-                Totalmente libre de estrés."</span>
-            </p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">RS</div>
-              <div>
-                <p class="testimonial-card__name">Rebecca S.</p>
-                <p class="testimonial-card__detail">
-                  <span class="lang-en">Long Beach, CA · Full Architectural Landscape</span>
-                  <span class="lang-es">Long Beach, CA · Arquitectura de Paisaje Total</span>
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <article class="testimonial-card reveal reveal-delay-2">
-            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="testimonial-card__quote">
-              <span class="lang-en">"They handled every permit, every inspection. I didn't have to make a single city
-                call. The masonry work on our outdoor kitchen is museum-quality. Worth every dollar."</span>
-              <span class="lang-es">"Manejaron cada permiso, cada inspección de la ciudad. No tuve que hacer ni una sola
-                llamada al ayuntamiento. El trabajo de mampostería en nuestra cocina exterior es de calidad de museo.
-                Vale muchísimo la pena."</span>
-            </p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">JL</div>
-              <div>
-                <p class="testimonial-card__name">James L.</p>
-                <p class="testimonial-card__detail">
-                  <span class="lang-en">Downey, CA · Masonry & Outdoor Kitchen</span>
-                  <span class="lang-es">Downey, CA · Mampostería y Cocina Exterior</span>
-                </p>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ───────────────────────────────────────────────
-      7. FAQ
-    ─────────────────────────────────────────────── -->
-    <section class="faq" id="faq" aria-labelledby="faq-title">
-      <div class="container">
-        <div class="faq__inner">
-
-          <header class="reveal">
-            <span class="section-label" style="color: var(--color-tertiary);">
-              <span class="lang-en">Common Questions</span><span class="lang-es">Preguntas Comunes</span>
+              alt="Poolside hardscape and lounge area" width="1600" height="1000" loading="lazy" decoding="async">
+            <span class="gallery-card__overlay">
+              <strong>Long Beach Retreat</strong>
+              <small><span class="lang-en">Poolside hardscape refinement</span><span class="lang-es">Refinamiento junto
+                  a piscina</span></small>
             </span>
-            <h2 class="faq__title" id="faq-title">
-              <span class="lang-en">Reliability<br />Fact Sheet.</span><span class="lang-es">Hoja
-                de<br />Confiabilidad.</span>
-            </h2>
-            <p class="faq__subtitle">
-              <span class="lang-en">Answers to the questions that matter before you commit your investment.</span>
-              <span class="lang-es">Respuestas concretas a las preguntas que importan antes de comprometer su
-                inversión.</span>
-            </p>
-          </header>
-
-          <div class="faq__list" role="list">
-
-            <div class="faq-item" role="listitem">
-              <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-1" id="faq-trigger-1">
-                <span class="lang-en">What is the typical project timeline?</span><span class="lang-es">¿Cuál es el
-                  tiempo típico de un proyecto?</span>
-                <span class="material-symbols-outlined faq-item__icon" aria-hidden="true">add</span>
-              </button>
-              <div class="faq-item__body" id="faq-1" role="region" aria-labelledby="faq-trigger-1" hidden>
-                <p class="faq-item__answer">
-                  <span class="lang-en">Design phases typically last 2–3 weeks. Construction ranges from 4 weeks for
-                    focused hardscaping to 12 weeks for complex multi-tier architectural builds. We provide a detailed
-                    milestone schedule before breaking ground.</span>
-                  <span class="lang-es">Las fases de diseño suelen durar entre 2 y 3 semanas. La construcción varía de 4
-                    semanas para áreas de hardscaping enfocadas a 12 semanas para construcciones arquitectónicas
-                    complejas de varios niveles. Proporcionamos un cronograma detallado por hitos antes de
-                    excavar.</span>
-                </p>
-              </div>
-            </div>
-
-            <div class="faq-item" role="listitem">
-              <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-2" id="faq-trigger-2">
-                <span class="lang-en">Do you handle all permits and city approvals?</span><span
-                  class="lang-es">¿Gestionan todos los permisos y aprobaciones de la ciudad?</span>
-                <span class="material-symbols-outlined faq-item__icon" aria-hidden="true">add</span>
-              </button>
-              <div class="faq-item__body" id="faq-2" role="region" aria-labelledby="faq-trigger-2" hidden>
-                <p class="faq-item__answer">
-                  <span class="lang-en">Yes — our service is fully turn-key. We manage all city submittals, inspections,
-                    and zoning compliance across Pasadena, Downey, Long Beach, and surrounding areas. You never have to
-                    call a city office.</span>
-                  <span class="lang-es">Sí, nuestro servicio es totalmente llave en mano. Gestionamos todas las
-                    presentaciones a la ciudad, inspecciones y cumplimiento de zonificación en toda el área
-                    metropolitana de Los Ángeles. Usted no tendrá que hacer nunca una llamada a la oficina de la
-                    ciudad.</span>
-                </p>
-              </div>
-            </div>
-
-            <div class="faq-item" role="listitem">
-              <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-3" id="faq-trigger-3">
-                <span class="lang-en">What warranties do you offer?</span><span class="lang-es">¿Qué tipo de garantías
-                  ofrecen y de cuánto tiempo?</span>
-                <span class="material-symbols-outlined faq-item__icon" aria-hidden="true">add</span>
-              </button>
-              <div class="faq-item__body" id="faq-3" role="region" aria-labelledby="faq-trigger-3" hidden>
-                <p class="faq-item__answer">
-                  <span class="lang-en">We provide a 5-year structural warranty on all timber work and a lifetime
-                    warranty on stone craftsmanship (excluding natural wear and acts of nature). Documentation provided
-                    at project handoff.</span>
-                  <span class="lang-es">Proporcionamos una garantía estructural de 5 años en todo el trabajo estructural
-                    de madera y una garantía de por vida implícita en la artesanía en piedra (excluyendo el desgaste
-                    natural y actos de la naturaleza). Evidencia entregable al final del proyecto.</span>
-                </p>
-              </div>
-            </div>
-
-            <div class="faq-item" role="listitem">
-              <button class="faq-item__trigger" aria-expanded="false" aria-controls="faq-4" id="faq-trigger-4">
-                <span class="lang-en">What is the minimum project investment?</span><span class="lang-es">¿Cuál es su
-                  requerimiento mínimo de inversión por proyecto?</span>
-                <span class="material-symbols-outlined faq-item__icon" aria-hidden="true">add</span>
-              </button>
-              <div class="faq-item__body" id="faq-4" role="region" aria-labelledby="faq-trigger-4" hidden>
-                <p class="faq-item__answer">
-                  <span class="lang-en">We prioritize high-specification commissions starting at $25,000. This ensures
-                    every project receives the full attention of our senior design team and master craftsmen without
-                    compromise.</span>
-                  <span class="lang-es">Entendemos que los proyectos de alta gama requieren inversión. Priorizamos
-                    comisiones de alta especificación comenzando aproximadamente en base a $25,000 Dólares. Esto
-                    garantiza que cada proyecto reciba la atención inquebrantable de nuestro equipo de diseño.</span>
-                </p>
-              </div>
-            </div>
-
-          </div>
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- ───────────────────────────────────────────────
-      8. ESTIMATOR — MULTI-STEP FORM
-    ─────────────────────────────────────────────── -->
-    <section class="estimator" id="estimate" aria-labelledby="estimator-title">
-      <div class="container">
+    <!-- Conversion intent: qualification copy helps the right lead self-select without making the page feel exclusionary. -->
+    <section class="section fit-section">
+      <div class="container fit-section__grid">
+        <div>
 
-        <div class="estimator__card">
-
-          <div class="estimator__card-header">
-            <span class="estimator__card-overline overline">
-              <span class="lang-en">Free · No Obligation</span><span class="lang-es">Gratis · Sin Compromiso</span>
-            </span>
-            <h2 class="estimator__card-title" id="estimator-title">
-              <span class="lang-en">Request Free Estimate</span><span class="lang-es">Solicitar Estimación
-                Gratuita</span>
-            </h2>
-            <p class="estimator__card-subtitle">
-              <span class="lang-en">3 quick steps. No commitment. We respond within 24 hours.</span>
-              <span class="lang-es">3 pasos simples. Sin compromisos. Un consultor sénior le responderá
-                inmediatamente.</span>
-            </p>
-          </div>
-
-          <div class="estimator__card-body">
-
-            <div class="form-progress" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3"
-              aria-label="Form progress">
-              <div class="form-progress__step active" id="prog-1">
-                <div class="form-progress__dot">1</div>
-                <span class="form-progress__label"><span class="lang-en">Project</span><span
-                    class="lang-es">Proyecto</span></span>
-              </div>
-              <div class="form-progress__line" id="prog-line-1"></div>
-              <div class="form-progress__step" id="prog-2">
-                <div class="form-progress__dot">2</div>
-                <span class="form-progress__label"><span class="lang-en">Budget</span><span
-                    class="lang-es">Inversión</span></span>
-              </div>
-              <div class="form-progress__line" id="prog-line-2"></div>
-              <div class="form-progress__step" id="prog-3">
-                <div class="form-progress__dot">3</div>
-                <span class="form-progress__label"><span class="lang-en">Contact</span><span
-                    class="lang-es">Contacto</span></span>
-              </div>
-            </div>
-
-            <form id="estimator-form" novalidate aria-label="Project estimate request form">
-
-              <!-- STEP 1 -->
-              <div class="form-step active" id="step-1" aria-label="Step 1: Project type">
-                <p style="font-size:0.9rem; color: var(--color-on-surface-variant); margin-bottom: 0.5rem;">
-                  <span class="lang-en">What type of project do you have in mind?</span>
-                  <span class="lang-es">¿Qué clase de rediseño tienes planeado hacer?</span>
-                </p>
-
-                <div class="option-group" role="group" aria-label="Project type selection">
-                  <label class="option-card selected" for="type-full" id="card-full">
-                    <input type="radio" name="project_type" id="type-full" value="Full Architectural Landscape"
-                      checked />
-                    <span class="material-symbols-outlined option-card__icon" aria-hidden="true">landscape</span>
-                    <span class="option-card__label"><span class="lang-en">Full Landscaping</span><span
-                        class="lang-es">Landscape Completo</span></span>
-                  </label>
-
-                  <label class="option-card" for="type-deck" id="card-deck">
-                    <input type="radio" name="project_type" id="type-deck" value="Custom Deck & Pergola" />
-                    <span class="material-symbols-outlined option-card__icon" aria-hidden="true">deck</span>
-                    <span class="option-card__label"><span class="lang-en">Deck & Pergola</span><span
-                        class="lang-es">Deck & Pérgola</span></span>
-                  </label>
-
-                  <label class="option-card" for="type-masonry" id="card-masonry">
-                    <input type="radio" name="project_type" id="type-masonry" value="Masonry & Outdoor Kitchen" />
-                    <span class="material-symbols-outlined option-card__icon" aria-hidden="true">outdoor_grill</span>
-                    <span class="option-card__label"><span class="lang-en">Outdoor Kitchen</span><span
-                        class="lang-es">Cocina Exterior</span></span>
-                  </label>
-
-                  <label class="option-card" for="type-pool" id="card-pool">
-                    <input type="radio" name="project_type" id="type-pool" value="Poolside Hardscaping" />
-                    <span class="material-symbols-outlined option-card__icon" aria-hidden="true">pool</span>
-                    <span class="option-card__label"><span class="lang-en">Poolside Design</span><span
-                        class="lang-es">Diseño Tipo Piscina</span></span>
-                  </label>
-                </div>
-
-                <div class="form-field" id="field-location" style="margin-top:1.5rem;">
-                  <label for="location"><span class="lang-en">City</span><span class="lang-es">Ciudad</span></label>
-                  <input type="text" id="location" name="location" placeholder="Pruébame: Pasadena, Long Beach…"
-                    required />
-                  <span class="field-error" id="location-error" role="alert">
-                    <span class="lang-en">City is required to continue.</span><span class="lang-es">Tienes que ingresar
-                      tu ciudad para continuar.</span>
-                  </span>
-                </div>
-
-                <div class="form-nav">
-                  <button type="button" class="form-nav__back" hidden aria-hidden="true">← Atrás</button>
-                  <button type="button" class="btn btn--dark" id="next-1" style="margin-left:auto;">
-                    <span class="lang-en">Next →</span><span class="lang-es">Siguiente Paso →</span>
-                  </button>
-                </div>
-              </div>
-
-              <!-- STEP 2 -->
-              <div class="form-step" id="step-2" aria-label="Step 2: Budget range">
-                <p style="font-size:0.9rem; color: var(--color-on-surface-variant); margin-bottom: 0.5rem;">
-                  <span class="lang-en">What is your estimated investment range?</span>
-                  <span class="lang-es">¿Cuál es tu rango presupuestal general planeado?</span>
-                </p>
-
-                <div class="budget-options" role="group" aria-label="Budget range selection">
-                  <label class="budget-option" for="budget-25" id="budget-card-25">
-                    <input type="radio" name="budget" id="budget-25" value="$25k - $50k" required />
-                    <div>
-                      <p class="budget-option__text">$25,000 – $50,000</p>
-                      <p class="budget-option__sub"><span class="lang-en">Focused Hardscaping</span><span
-                          class="lang-es">Hardscaping en áreas focales</span></p>
-                    </div>
-                  </label>
-
-                  <label class="budget-option" for="budget-50" id="budget-card-50">
-                    <input type="radio" name="budget" id="budget-50" value="$50k - $100k" />
-                    <div>
-                      <p class="budget-option__text">$50,000 – $100,000</p>
-                      <p class="budget-option__sub"><span class="lang-en">Multi-feature outdoor living</span><span
-                          class="lang-es">Sistema multicomplejo exterior</span></p>
-                    </div>
-                  </label>
-
-                  <label class="budget-option" for="budget-100" id="budget-card-100">
-                    <input type="radio" name="budget" id="budget-100" value="$100k - $250k" />
-                    <div>
-                      <p class="budget-option__text">$100,000 – $250,000</p>
-                      <p class="budget-option__sub"><span class="lang-en">Full Architectural Metamorphosis</span><span
-                          class="lang-es">Transformación arquitectónica total</span></p>
-                    </div>
-                  </label>
-
-                  <label class="budget-option" for="budget-250" id="budget-card-250">
-                    <input type="radio" name="budget" id="budget-250" value="$250k+" />
-                    <div>
-                      <p class="budget-option__text">$250,000+</p>
-                      <p class="budget-option__sub"><span class="lang-en">Estate-level Commission</span><span
-                          class="lang-es">Comisiones personalizadas masivas</span></p>
-                    </div>
-                  </label>
-                </div>
-                <span class="field-error" id="budget-error" role="alert" style="display:none;">
-                  <span class="lang-en">Please select a budget range.</span><span class="lang-es">Selecciona una
-                    categoría para continuar tu consulta.</span>
-                </span>
-
-                <div class="form-nav">
-                  <button type="button" class="form-nav__back" id="back-2">
-                    <span class="lang-en">← Back</span><span class="lang-es">← Volver</span>
-                  </button>
-                  <button type="button" class="btn btn--dark" id="next-2">
-                    <span class="lang-en">Next →</span><span class="lang-es">Siguiente →</span>
-                  </button>
-                </div>
-              </div>
-
-              <!-- STEP 3 -->
-              <div class="form-step" id="step-3" aria-label="Step 3: Contact details">
-                <p style="font-size:0.9rem; color: var(--color-on-surface-variant); margin-bottom: 0.5rem;">
-                  <span class="lang-en">Where should we send your personalized estimate guide?</span>
-                  <span class="lang-es">¿A qué correo te enviamos el desglose de estimación personal?</span>
-                </p>
-
-                <div class="form-row">
-                  <div class="form-field" id="field-name">
-                    <label for="full-name"><span class="lang-en">Full Name</span><span class="lang-es">Nombre
-                        Completo</span></label>
-                    <input type="text" id="full-name" name="name" placeholder="Ej: Jonathan Osorio" required />
-                    <span class="field-error" id="name-error" role="alert">
-                      <span class="lang-en">Name is required.</span><span class="lang-es">Tu nombre oficial es requerido
-                        aquí.</span>
-                    </span>
-                  </div>
-
-                  <div class="form-field" id="field-phone">
-                    <label for="phone">
-                      <span class="lang-en">Phone (Optional)</span><span class="lang-es">Teléfono (Opcional)</span>
-                    </label>
-                    <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" />
-                  </div>
-                </div>
-
-                <div class="form-field" id="field-email">
-                  <label for="email"><span class="lang-en">Email Addres</span><span class="lang-es">Tu Correo
-                      Institucional/Personal</span></label>
-                  <input type="email" id="email" name="email" placeholder="tu@dominio.com" required />
-                  <span class="field-error" id="email-error" role="alert">
-                    <span class="lang-en">Valid email is required.</span><span class="lang-es">Escribe el email del que
-                      podemos rastrearte de vuelta!</span>
-                  </span>
-                </div>
-
-                <div class="form-field">
-                  <label for="notes">
-                    <span class="lang-en">Additional Notes</span><span class="lang-es">Tus Notas Personales
-                      Adicionales</span>
-                    <span style="font-weight:400;opacity:0.6;"><span class="lang-en">(Optional)</span><span
-                        class="lang-es">(Opcional)</span></span>
-                  </label>
-                  <textarea id="notes" name="notes" placeholder="Inspiración visual..." rows="3"></textarea>
-                </div>
-
-                <div class="form-nav" style="flex-direction: column; gap: 1rem; align-items: stretch;">
-                  <button type="button" class="form-nav__back" id="back-3" style="align-self:flex-start;">
-                    <span class="lang-en">← Back</span><span class="lang-es">← Volver</span>
-                  </button>
-                  <button type="submit" class="btn btn--dark btn--full" id="submit-btn">
-                    <span class="material-symbols-outlined" aria-hidden="true" style="font-size:1.1rem;">send</span>
-                    <span class="lang-en">Send Estimate Request</span><span class="lang-es">Enviar Ahora tu Solicitud
-                      Personal</span>
-                  </button>
-                  <p
-                    style="font-size:0.72rem; color: var(--color-on-surface-variant); text-align:center; margin-top: -0.5rem;">
-                    <span class="lang-en">No obligation. Your info is 100% confidential.</span>
-                    <span class="lang-es">Nada será cobrado aquí. Toda la información enviada es 100% libre de
-                      riesgos.</span>
-                  </p>
-                </div>
-              </div>
-
-              <!-- SUCCESS -->
-              <div class="form-success" id="form-success" aria-live="polite">
-                <div class="form-success__icon">
-                  <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
-                </div>
-                <h3 class="form-success__title">
-                  <span class="lang-en">Request Received!</span><span class="lang-es">¡Perfecto! Nos Recibimos Tu
-                    Solicitud</span>
-                </h3>
-                <p class="form-success__desc">
-                  <span class="lang-en">Thank you for contacting us. A senior design member will reach out to you within
-                    the next 24 business hours.</span>
-                  <span class="lang-es">Estimado colega, un profesional avanzado de nuestro equipo se comunicará contigo
-                    rápidamente dentro del tiempo hábil establecido para cotizar sin demoras.</span>
-                </p>
-              </div>
-
-            </form>
-          </div>
+          <h2><span class="lang-en">The right projects, faster.</span><span class="lang-es">Los proyectos correctos, mas
+              rapido.</span></h2>
         </div>
-      </div>
-    </section>
 
-    <!-- ───────────────────────────────────────────────
-      9. SERVICE AREA
-    ─────────────────────────────────────────────── -->
-    <section class="service-area" aria-labelledby="service-title">
-      <div class="container">
-        <div class="service-area__inner">
-
-          <div>
-            <span class="section-label" style="color: var(--color-tertiary);">
-              <span class="lang-en">Service Zones</span><span class="lang-es">Nuestras Zonas de Cobertura</span>
-            </span>
-            <h2 class="service-area__title" id="service-title">
-              <span class="lang-en">Servicing Greater<br />Los Angeles.</span><span class="lang-es">Sirviendo
-                Exclusivamente<br />Los Ángeles.</span>
-            </h2>
-
-            <ul class="service-area__cities" role="list">
-              <li class="city-item">
-                <span class="material-symbols-outlined city-item__icon" aria-hidden="true">location_on</span>
-                <span class="city-item__name">Pasadena</span>
-              </li>
-              <li class="city-item">
-                <span class="material-symbols-outlined city-item__icon" aria-hidden="true">location_on</span>
-                <span class="city-item__name">Downey</span>
-              </li>
-              <li class="city-item">
-                <span class="material-symbols-outlined city-item__icon" aria-hidden="true">location_on</span>
-                <span class="city-item__name">Long Beach</span>
-              </li>
-              <li class="city-item">
-                <span class="material-symbols-outlined city-item__icon" aria-hidden="true">location_on</span>
-                <span class="city-item__name">
-                  <span class="lang-en">Surrounding Areas</span><span class="lang-es">Áreas Conectadas
-                    Metropolitanas</span>
-                </span>
-              </li>
+        <div class="fit-cards">
+          <article class="fit-card">
+            <h3><span class="lang-en">Ideal scopes</span><span class="lang-es">Scopes ideales</span></h3>
+            <ul>
+              <li><span class="lang-en">Full redesigns</span><span class="lang-es">Rediseno total</span></li>
+              <li><span class="lang-en">Pergolas and decks</span><span class="lang-es">Pergolas y decks</span></li>
+              <li><span class="lang-en">Pavers and poolside</span><span class="lang-es">Pavers y piscina</span></li>
+              <li><span class="lang-en">Premium upgrades</span><span class="lang-es">Upgrades premium</span></li>
             </ul>
-          </div>
-
-          <div class="service-area__map-wrap" id="map-container" aria-label="Map">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnOA9fkmZRooabUaIOVR9XmnPvEbWH4JWRslb_WLV53Xz5FpR2BsvVkTMy5G70BpVWR6lS8kEPvfzBnvIlZsCJEAkOPQ_rDMT3Mr6Y_-Cho5eoExyVpBK6r1KxjbLv59IKR2DuzIaHeepsvk-3v9QuMTjqJpCiRoqrDKkybdlDOPsEjj88y_WgUPy58fiGjkGewD8ignTMVv5pcOkhMabPw4f25B5QGkyc37rY2MJ6sViyRAgImTB8t5Z8rnu70stuHKDCPoMKJgSC"
-              alt="Service area" loading="lazy" width="1400" height="600" />
-            <div class="service-area__map-overlay" aria-hidden="true"></div>
-          </div>
-
+          </article>
+          <article class="fit-card fit-card--muted">
+            <h3><span class="lang-en">Not core</span><span class="lang-es">No es core</span></h3>
+            <ul>
+              <li><span class="lang-en">Routine maintenance</span><span class="lang-es">Mantenimiento rutinario</span>
+              </li>
+              <li><span class="lang-en">Small cosmetic fixes</span><span class="lang-es">Arreglos pequenos</span></li>
+              <li><span class="lang-en">No design scope</span><span class="lang-es">Sin scope de diseno</span></li>
+            </ul>
+          </article>
         </div>
-      </div>
-    </section>
 
-    <!-- ───────────────────────────────────────────────
-      10. FINAL CTA
-    ─────────────────────────────────────────────── -->
-    <section class="final-cta" aria-labelledby="final-cta-title">
-      <div class="final-cta__blob-1" aria-hidden="true"></div>
-      <div class="final-cta__blob-2" aria-hidden="true"></div>
-
-      <div class="container" style="position:relative; z-index:1;">
-        <span class="final-cta__overline overline">
-          <span class="lang-en">Limited Openings</span><span class="lang-es">Disponibilidades Ultra-Limitadas de
-            Temporada</span>
-        </span>
-        <h2 class="final-cta__title" id="final-cta-title">
-          <span class="lang-en">Limited seasonal openings<br />available for 2025.</span>
-          <span class="lang-es">Citas de valoración de apertura limitadas,<br />ahora disponibles para la línea de
-            2025.</span>
-        </h2>
-
-        <a href="#estimate" class="btn btn--dark" id="final-cta-btn">
-          <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
-          <span class="lang-en">Secure Your Commission</span><span class="lang-es">Conserva y Bloquea Tu Sesión
-            Privada</span>
+        <a class="button button--primary fit-section__cta" href="#estimate" data-track="ironwood_cta_click">
+          <span class="lang-en">Get Your Project Quote</span>
+          <span class="lang-es">Obten tu cotizacion</span>
         </a>
+      </div>
+    </section>
 
-        <div style="margin-top: 2rem;">
-          <div class="final-cta__badge">
-            <span class="material-symbols-outlined final-cta__badge-icon" aria-hidden="true">verified</span>
-            <span class="lang-en">Mastering the intersection of wood, stone, and light.</span>
-            <span class="lang-es">Perfeccionistas en la intersección viva interactiva entre la madera, la piedra y la
-              luz solar.</span>
+    <!-- Conversion intent: playful IA teaser creates engagement while staying clearly disconnected from backend logic for now. -->
+    <section class="section ai-lab" id="ai-lab">
+      <div class="container ai-lab__grid">
+        <div class="ai-lab__copy">
+          <p class="eyebrow"><span class="lang-en">AI playground</span><span class="lang-es">Zona IA</span></p>
+          <h2><span class="lang-en">Have fun with us.</span><span class="lang-es">Diviertete con nosotros.</span></h2>
+
+          <p class="ai-lab__note">
+
+          </p>
+          <button class="button button--accent button--xl" type="button" data-ai-play>
+            <span class="lang-en">Have fun with us</span>
+            <span class="lang-es">Diviertete con nosotros</span>
+          </button>
+        </div>
+
+        <div class="ai-console" aria-label="Nanobanana visual mockup">
+          <div class="ai-console__header">
+            <span>Nanobanana visual shell</span>
+            <span class="ai-console__status" data-ai-status>
+              <span class="lang-en">Ready</span><span class="lang-es">Listo</span>
+            </span>
+          </div>
+
+          <div class="ai-upload-area" id="ai-upload-area">
+            <input type="file" id="ai-ref-image" accept="image/*" class="sr-only" data-ai-upload>
+            <label for="ai-ref-image" class="ai-upload-label">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+              <span class="ai-upload-text" data-ai-upload-text>
+                <span class="lang-en">Upload reference image</span>
+                <span class="lang-es">Sube imagen de referencia</span>
+              </span>
+            </label>
+            <button type="button" class="ai-upload-remove" data-ai-upload-remove hidden
+              aria-label="Remove image">&times;</button>
+          </div>
+
+          <div class="ai-console__prompt">
+            <label for="ai-prompt"><span class="lang-en">Prompt preview</span><span class="lang-es">Prompt
+                generado</span></label>
+            <textarea id="ai-prompt" rows="3"
+              readonly>Create a California backyard concept with charcoal pergola framing, warm lighting, integrated pavers and a more premium hospitality flow.</textarea>
+          </div>
+
+          <div class="ai-chip-group" aria-label="Concept filters">
+            <button class="ai-chip is-active" data-ai-chip>Pergola</button>
+            <button class="ai-chip is-active" data-ai-chip>Pavers</button>
+            <button class="ai-chip" data-ai-chip><span class="lang-en">Lighting</span><span
+                class="lang-es">Iluminacion</span></button>
+            <button class="ai-chip" data-ai-chip><span class="lang-en">Outdoor Kitchen</span><span
+                class="lang-es">Cocina Exterior</span></button>
+            <button class="ai-chip" data-ai-chip><span class="lang-en">Poolside</span><span
+                class="lang-es">Piscina</span></button>
+          </div>
+
+          <button class="button button--primary ai-generate-btn" type="button" data-ai-generate>
+            <span class="lang-en">Generate Vision</span>
+            <span class="lang-es">Generar Vision</span>
+          </button>
+
+          <div class="ai-preview-grid">
+            <article class="ai-preview-card ai-preview-card--active" data-ai-preview>
+              <span>Preview A</span>
+              <strong><span class="lang-en">Warm entertaining</span><span class="lang-es">Entretenimiento
+                  calido</span></strong>
+            </article>
+            <article class="ai-preview-card" data-ai-preview>
+              <span>Preview B</span>
+              <strong><span class="lang-en">Deck focus</span><span class="lang-es">Foco en deck</span></strong>
+            </article>
+            <article class="ai-preview-card" data-ai-preview>
+              <span>Preview C</span>
+              <strong><span class="lang-en">Poolside resort</span><span class="lang-es">Resort de
+                  piscina</span></strong>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Conversion intent: authority plus FAQ answers objections right before the lead form. -->
+    <section class="section authority-faq" id="faq">
+      <div class="container authority-faq__grid">
+        <div class="authority-panel">
+
+          <h2><span class="lang-en">Short answers. Strong trust.</span><span class="lang-es">Respuestas cortas.
+              Confianza fuerte.</span></h2>
+
+          <div class="authority-stack">
+            <article class="authority-card">
+              <h3><span class="lang-en">Insured</span><span class="lang-es">Asegurado</span></h3>
+              <p><span class="lang-en">Built for serious projects.</span><span class="lang-es">Pensado para proyectos
+                  serios.</span></p>
+            </article>
+            <article class="authority-card">
+              <h3><span class="lang-en">Timeline</span><span class="lang-es">Tiempo</span></h3>
+              <p><span class="lang-en">From days to multi-week scopes.</span><span class="lang-es">Desde dias hasta
+                  varias semanas.</span></p>
+            </article>
+            <article class="authority-card">
+              <h3><span class="lang-en">Warranty</span><span class="lang-es">Garantia</span></h3>
+              <p><span class="lang-en">Confidence after delivery.</span><span class="lang-es">Confianza despues de
+                  entregar.</span></p>
+            </article>
+          </div>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span class="lang-en">Do you guide premium planning?</span><span class="lang-es">Guias la
+                planeacion premium?</span></summary>
+            <p>
+              <span class="lang-en">Yes. Design and build are presented together.</span>
+              <span class="lang-es">Si. Diseno y construccion se presentan juntos.</span>
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary><span class="lang-en">What timeline should clients expect?</span><span class="lang-es">Que tiempos
+                puede esperar el cliente?</span></summary>
+            <p>
+              <span class="lang-en">From quick scopes to multi-week projects.</span>
+              <span class="lang-es">Desde trabajos rapidos hasta proyectos de varias semanas.</span>
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary><span class="lang-en">Why show renders first?</span><span class="lang-es">Por que mostrar renders
+                primero?</span></summary>
+            <p>
+              <span class="lang-en">Because visuals reduce doubt.</span>
+              <span class="lang-es">Porque los visuales reducen la duda.</span>
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary><span class="lang-en">How does this page convert better?</span><span class="lang-es">Como convierte
+                mejor esta pagina?</span></summary>
+            <p>
+              <span class="lang-en">Value, proof, fit, then quote.</span>
+              <span class="lang-es">Valor, prueba, encaje y luego cotizacion.</span>
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conversion intent: local relevance helps premium buyers trust service coverage and logistics. -->
+    <section class="section service-map">
+      <div class="container service-map__grid">
+        <div>
+          <p class="eyebrow"><span class="lang-en">Service area</span><span class="lang-es">Cobertura</span></p>
+          <h2><span class="lang-en">Map-ready service zones.</span><span class="lang-es">Zonas listas para mapa.</span>
+          </h2>
+          <ul class="service-list">
+            <li>Pasadena</li>
+            <li>Downey</li>
+            <li>Long Beach</li>
+            <li><span class="lang-en">Nearby areas on review</span><span class="lang-es">Zonas cercanas segun
+                revision</span></li>
+          </ul>
+        </div>
+
+        <div class="map-shell" data-map-embed="pending">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnOA9fkmZRooabUaIOVR9XmnPvEbWH4JWRslb_WLV53Xz5FpR2BsvVkTMy5G70BpVWR6lS8kEPvfzBnvIlZsCJEAkOPQ_rDMT3Mr6Y_-Cho5eoExyVpBK6r1KxjbLv59IKR2DuzIaHeepsvk-3v9QuMTjqJpCiRoqrDKkybdlDOPsEjj88y_WgUPy58fiGjkGewD8ignTMVv5pcOkhMabPw4f25B5QGkyc37rY2MJ6sViyRAgImTB8t5Z8rnu70stuHKDCPoMKJgSC"
+            alt="California service area placeholder map" width="1600" height="700" loading="lazy" decoding="async">
+          <div class="map-shell__overlay">
+            <strong><span class="lang-en">Google Maps ready</span><span class="lang-es">Listo para Google
+                Maps</span></strong>
+            <span><span class="lang-en">Placeholder for future embed.</span><span class="lang-es">Placeholder para
+                futuro embed.</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conversion intent: progressive multi-step form feels like a consultative experience rather than an interrogation. -->
+    <section class="section estimate" id="estimate">
+      <div class="container">
+        <div class="section-heading section-heading--light">
+          <p class="eyebrow"><span class="lang-en">Guided quote</span><span class="lang-es">Cotizacion guiada</span></p>
+          <h2><span class="lang-en">Get Your Project Quote</span><span class="lang-es">Obten tu cotizacion</span></h2>
+          <p><span class="lang-en">Fast, simple and guided.</span><span class="lang-es">Rapida, simple y guiada.</span>
+          </p>
+        </div>
+
+        <form class="consultation-form" id="consultation-form" method="post" enctype="multipart/form-data"
+          data-webhook-endpoint="">
+          <input type="hidden" name="utm_source">
+          <input type="hidden" name="utm_medium">
+          <input type="hidden" name="utm_campaign">
+          <input type="hidden" name="gclid">
+          <input type="hidden" name="lead_priority">
+
+          <div class="form-progress" aria-hidden="true">
+            <div class="form-progress__bar"><span data-progress-fill></span></div>
+            <p data-progress-label>Step 1 of 4</p>
+          </div>
+
+          <p class="form-status" data-form-status aria-live="polite"></p>
+
+          <fieldset class="form-step" data-form-step="1">
+            <legend><span class="lang-en">Step 1. Project type</span><span class="lang-es">Paso 1. Tipo de
+                proyecto</span></legend>
+            <p class="form-step__hint"><span class="lang-en">Choose one.</span><span class="lang-es">Elige una
+                opcion.</span></p>
+
+            <div class="choice-grid">
+              <label class="choice-card">
+                <input type="radio" name="project_type" value="Full redesign" required>
+                <span><span class="lang-en">Full backyard redesign</span><span class="lang-es">Rediseno
+                    integral</span></span>
+                <small><span class="lang-en">Full scope</span><span class="lang-es">Scope total</span></small>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="project_type" value="Pavers and hardscape" required>
+                <span><span class="lang-en">Pavers &amp; hardscape</span><span class="lang-es">Pavers y
+                    hardscape</span></span>
+                <small><span class="lang-en">Stone-led scope</span><span class="lang-es">Scope de piedra</span></small>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="project_type" value="Pergola or deck" required>
+                <span><span class="lang-en">Pergola or deck</span><span class="lang-es">Pergola o deck</span></span>
+                <small><span class="lang-en">Shade and structure</span><span class="lang-es">Sombra y
+                    estructura</span></small>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="project_type" value="Outdoor kitchen or poolside" required>
+                <span><span class="lang-en">Outdoor kitchen / poolside</span><span class="lang-es">Cocina exterior /
+                    piscina</span></span>
+                <small><span class="lang-en">Entertaining zone</span><span class="lang-es">Zona social</span></small>
+              </label>
+            </div>
+
+            <div class="form-step__actions">
+              <button class="button button--primary" type="button" data-step-next><span
+                  class="lang-en">Continue</span><span class="lang-es">Continuar</span></button>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-step" data-form-step="2">
+            <legend><span class="lang-en">Step 2. Budget range</span><span class="lang-es">Paso 2. Rango de
+                inversion</span></legend>
+            <p class="form-step__hint"><span class="lang-en">This helps prioritize.</span><span class="lang-es">Esto
+                ayuda a priorizar.</span></p>
+
+            <div class="choice-grid choice-grid--compact">
+              <label class="choice-card">
+                <input type="radio" name="budget" value="$5k - $15k" required>
+                <span>$5k - $15k</span>
+                <small>Entrada inicial</small>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="budget" value="$15k - $25k" required>
+                <span>$15k - $25k</span>
+                <small>Scope still growing</small>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="budget" value="$25k - $50k" required>
+                <span>$25k - $50k</span>
+                <small>Best-fit premium range</small>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="budget" value="$50k - $100k+" required>
+                <span>$50k - $100k+</span>
+                <small>Transformational scope</small>
+              </label>
+            </div>
+
+            <div class="form-step__actions">
+              <button class="button button--ghost" type="button" data-step-back><span class="lang-en">Back</span><span
+                  class="lang-es">Atras</span></button>
+              <button class="button button--primary" type="button" data-step-next><span
+                  class="lang-en">Continue</span><span class="lang-es">Continuar</span></button>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-step" data-form-step="3">
+            <legend><span class="lang-en">Step 3. Location and contact</span><span class="lang-es">Paso 3. Ubicacion y
+                contacto</span></legend>
+            <p class="form-step__hint"><span class="lang-en">Basic project info.</span><span class="lang-es">Info basica
+                del proyecto.</span></p>
+
+            <div class="field-grid">
+              <label class="field">
+                <span><span class="lang-en">Full name</span><span class="lang-es">Nombre</span></span>
+                <input type="text" name="full_name" required placeholder="Your name">
+              </label>
+              <label class="field">
+                <span><span class="lang-en">Email</span><span class="lang-es">Correo</span></span>
+                <input type="email" name="email" required placeholder="name@email.com">
+              </label>
+              <label class="field">
+                <span><span class="lang-en">Phone</span><span class="lang-es">Telefono</span></span>
+                <input type="tel" name="phone" placeholder="(555) 555-5555">
+              </label>
+              <label class="field">
+                <span><span class="lang-en">Project city / neighborhood</span><span class="lang-es">Ciudad /
+                    zona</span></span>
+                <input type="text" name="project_city" required placeholder="Pasadena, Downey, Long Beach...">
+              </label>
+              <label class="field field--full">
+                <span><span class="lang-en">Address or reference point</span><span class="lang-es">Direccion o
+                    referencia</span></span>
+                <input type="text" name="project_address" required
+                  placeholder="Street, neighborhood, or nearby landmark">
+              </label>
+            </div>
+
+            <div class="form-step__actions">
+              <button class="button button--ghost" type="button" data-step-back><span class="lang-en">Back</span><span
+                  class="lang-es">Atras</span></button>
+              <button class="button button--primary" type="button" data-step-next><span
+                  class="lang-en">Continue</span><span class="lang-es">Continuar</span></button>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-step" data-form-step="4">
+            <legend><span class="lang-en">Step 4. Photos and notes</span><span class="lang-es">Paso 4. Fotos y
+                notas</span></legend>
+            <p class="form-step__hint"><span class="lang-en">Up to 2 images.</span><span class="lang-es">Hasta 2
+                imagenes.</span></p>
+
+            <div class="field-grid">
+              <label class="field field--full">
+                <span><span class="lang-en">Upload up to 2 images</span><span class="lang-es">Sube hasta 2
+                    imagenes</span></span>
+                <input type="file" name="project_photos" accept="image/*" multiple data-photo-input>
+                <small class="field__helper" data-photo-helper>No files selected yet.</small>
+              </label>
+              <label class="field field--full">
+                <span><span class="lang-en">Project notes</span><span class="lang-es">Notas del proyecto</span></span>
+                <textarea name="project_notes" rows="5"
+                  placeholder="What would you like to improve, build, or reimagine?"></textarea>
+              </label>
+            </div>
+
+            <div class="form-step__actions">
+              <button class="button button--ghost" type="button" data-step-back><span class="lang-en">Back</span><span
+                  class="lang-es">Atras</span></button>
+              <button class="button button--primary" type="submit" data-track="ironwood_lead_submit">
+                <span class="lang-en">Get Your Project Quote</span>
+                <span class="lang-es">Obten tu cotizacion</span>
+              </button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <!-- Conversion intent: final reinforcement for users who need one more nudge after seeing the form. -->
+    <section class="section final-cta">
+      <div class="container final-cta__inner">
+
+        <h2><span class="lang-en">Ready to price your project?</span><span class="lang-es">Listo para cotizar tu
+            proyecto?</span></h2>
+        <a class="button button--primary button--xl" href="#estimate" data-track="ironwood_cta_click">
+          <span class="lang-en">Get Your Project Quote</span>
+          <span class="lang-es">Obten tu cotizacion</span>
+        </a>
+      </div>
+    </section>
   </main>
 
-  <!-- ════════════════════════════════════════════════
-    FOOTER
-  ════════════════════════════════════════════════ -->
-  <footer class="footer" role="contentinfo">
-    <div class="footer__inner">
+  <footer class="site-footer">
+    <div class="container footer-grid">
       <div>
-        <span class="footer__logo">LANDSCAPING</span>
-        <p class="footer__tagline">
-          <span class="lang-en">Licensed landscape architecture focusing on high-end structural timber and luxury
-            masonry in Southern California.</span>
-          <span class="lang-es">Arquitectos con licencias legales de construcción especializada y focalizada en
-            mampostería masiva de lujo exclusivo en ubicaciones selectas del Sur de California.</span>
+        <p class="brand__name"> Landscaping</p>
+        <p class="footer-copy">
+          <span class="lang-en">Premium outdoor spaces that help sell the project faster.</span>
+          <span class="lang-es">Espacios premium que ayudan a vender el proyecto mas rapido.</span>
         </p>
       </div>
 
       <div>
-        <span class="footer__col-title">
-          <span class="lang-en">Service Areas</span><span class="lang-es">Nuestras Zonas Exclusivas de Atención
-            Prioritaria</span>
-        </span>
-        <ul class="footer__links" role="list">
-          <li><a href="#service-area" class="footer__link">Pasadena</a></li>
-          <li><a href="#service-area" class="footer__link">Downey</a></li>
-          <li><a href="#service-area" class="footer__link">Long Beach</a></li>
+        <p class="footer-heading">Explore</p>
+        <ul class="footer-links">
+
+          <li><a href="#renders">Renders</a></li>
+          <li><a href="#gallery">Projects</a></li>
+          <li><a href="#estimate">Consultation</a></li>
         </ul>
       </div>
 
       <div>
-        <span class="footer__col-title">
-          <span class="lang-en">Connect</span><span class="lang-es">Comunícasenos Fácilmente</span>
-        </span>
-        <ul class="footer__links" role="list">
-          <li><a href="https://instagram.com/ironwooddesign" class="footer__link" target="_blank"
-              rel="noopener noreferrer">Instagram</a></li>
-          <li><a href="mailto:hello@ironwooddesign.com" class="footer__link"><span class="lang-en">Email Us</span><span
-                class="lang-es">Envíanos Correos Formativos</span></a></li>
-          <li><a href="#estimate" class="footer__link"><span class="lang-en">Get Estimate</span><span
-                class="lang-es">Desbloquea La Etapa Visual Constructiva</span></a></li>
+        <p class="footer-heading">Service focus</p>
+        <ul class="footer-links">
+          <li>California premium design/build</li>
+          <li>Pergolas, decks and pavers</li>
+          <li>Material-driven outdoor upgrades</li>
+          <li>Ready for CRM, tracking and map integration</li>
         </ul>
-      </div>
-
-    </div>
-
-    <div class="footer__bottom">
-      <p class="footer__copy">
-        <span class="lang-en">© 2025 Landscaping. All Rights Reserved.</span>
-        <span class="lang-es">© 2025 Landscaping Corporation California LLC. Patentes Reservadas y
-          Custodiadas.</span>
-      </p>
-      <div class="footer__badge">
-        <span class="material-symbols-outlined footer__badge-icon" aria-hidden="true">verified</span>
-        <span class="lang-en">Licensed &amp; Insured · California CSLB</span>
-        <span class="lang-es">Constructores 100% Protegidos &amp; Licenciados CSLB Activos.</span>
       </div>
     </div>
   </footer>
 
-  <!-- ════════════════════════════════════════════════
-    FLOATING MOBILE CTA
-  ════════════════════════════════════════════════ -->
-  <div class="floating-cta" id="floating-cta" aria-hidden="true">
-    <a href="#estimate" class="floating-cta__btn" id="mobile-floating-cta">
-      <span class="material-symbols-outlined" aria-hidden="true" style="font-size:1.1rem;">calendar_month</span>
-      <span class="lang-en">Request Free Estimate</span><span class="lang-es">Quiero Hablar y Solicitar</span>
-    </a>
+  <div class="project-modal" hidden>
+    <div class="project-modal__backdrop" data-modal-close></div>
+    <div class="project-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+      <button class="project-modal__close" type="button" data-modal-close aria-label="Close project details"><span
+          class="lang-en">Close</span><span class="lang-es">Cerrar</span></button>
+      <div class="project-modal__media">
+        <img src="" alt="" data-modal-image>
+      </div>
+      <div class="project-modal__copy">
+        <p class="eyebrow"><span class="lang-en">Project story</span><span class="lang-es">Historia del proyecto</span>
+        </p>
+        <h2 id="project-modal-title" data-modal-title></h2>
+        <p class="project-modal__subtitle" data-modal-subtitle></p>
+        <p data-modal-story></p>
+        <div class="project-modal__compare">
+          <article>
+            <h3><span class="lang-en">Before</span><span class="lang-es">Antes</span></h3>
+            <p data-modal-before></p>
+          </article>
+          <article>
+            <h3><span class="lang-en">After</span><span class="lang-es">Despues</span></h3>
+            <p data-modal-after></p>
+          </article>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- ════════════════════════════════════════════════
-    JAVASCRIPT
-  ════════════════════════════════════════════════ -->
-  <script>
-    (() => {
-      'use strict';
-
-      /* ── 1. NAVIGATION ──────────────────────────────── */
-      const nav = document.getElementById('main-nav');
-      const toggle = document.getElementById('mobile-menu-toggle');
-      const drawer = document.getElementById('mobile-drawer');
-      const overlay = document.getElementById('nav-overlay');
-      const drawerClose = document.getElementById('mobile-menu-close');
-      const drawerLinks = drawer.querySelectorAll('a');
-
-      const openDrawer = () => {
-        drawer.classList.add('open');
-        overlay.classList.add('visible');
-        drawer.setAttribute('aria-hidden', 'false');
-        toggle.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden';
-      };
-
-      const closeDrawer = () => {
-        drawer.classList.remove('open');
-        overlay.classList.remove('visible');
-        drawer.setAttribute('aria-hidden', 'true');
-        toggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      };
-
-      toggle.addEventListener('click', openDrawer);
-      drawerClose.addEventListener('click', closeDrawer);
-      overlay.addEventListener('click', closeDrawer);
-      drawerLinks.forEach(l => l.addEventListener('click', closeDrawer));
-
-      /* ── 2. SCROLL BEHAVIORS ────────────────────────── */
-      const floatingCta = document.getElementById('floating-cta');
-
-      window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        nav.classList.toggle('scrolled', scrollY > 40);
-
-        if (scrollY > 600) {
-          floatingCta.classList.add('visible');
-          floatingCta.setAttribute('aria-hidden', 'false');
-        } else {
-          floatingCta.classList.remove('visible');
-          floatingCta.setAttribute('aria-hidden', 'true');
-        }
-      }, { passive: true });
-
-      /* ── 3. FAQ ACCORDION ───────────────────────────── */
-      const faqItems = document.querySelectorAll('.faq-item');
-      faqItems.forEach(item => {
-        const trigger = item.querySelector('.faq-item__trigger');
-        const body = item.querySelector('.faq-item__body');
-
-        trigger.addEventListener('click', () => {
-          const isOpen = item.classList.contains('open');
-          faqItems.forEach(other => {
-            other.classList.remove('open');
-            other.querySelector('.faq-item__trigger').setAttribute('aria-expanded', 'false');
-            other.querySelector('.faq-item__body').hidden = true;
-          });
-
-          if (!isOpen) {
-            item.classList.add('open');
-            trigger.setAttribute('aria-expanded', 'true');
-            body.hidden = false;
-          }
-        });
-      });
-
-      /* ── 4. GALLERY OPTION CARDS (FORM) ─────────────── */
-      document.querySelectorAll('.option-card').forEach(card => {
-        card.addEventListener('click', () => {
-          document.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
-          card.classList.add('selected');
-          card.querySelector('input[type="radio"]').checked = true;
-        });
-      });
-
-      document.querySelectorAll('.budget-option input[type="radio"]').forEach(radio => {
-        radio.addEventListener('change', () => {
-          document.querySelectorAll('.budget-option').forEach(opt => opt.classList.remove('selected'));
-          if (radio.checked) radio.closest('.budget-option').classList.add('selected');
-        });
-      });
-
-      /* ── 5. MULTI-STEP FORM ─────────────────────────── */
-      const form = document.getElementById('estimator-form');
-      const steps = ['step-1', 'step-2', 'step-3'];
-      const progDots = [
-        document.getElementById('prog-1'),
-        document.getElementById('prog-2'),
-        document.getElementById('prog-3'),
-      ];
-      const progLines = [
-        document.getElementById('prog-line-1'),
-        document.getElementById('prog-line-2'),
-      ];
-      const progressBar = document.querySelector('.form-progress');
-
-      const updateProgress = (step) => {
-        progDots.forEach((dot, i) => {
-          dot.classList.remove('active', 'done');
-          if (i < step) dot.classList.add('done');
-          if (i === step) dot.classList.add('active');
-        });
-        progLines.forEach((line, i) => {
-          line.classList.toggle('done', i < step);
-        });
-        progressBar.setAttribute('aria-valuenow', step + 1);
-      };
-
-      const showStep = (index) => {
-        steps.forEach((id, i) => {
-          const el = document.getElementById(id);
-          if (i === index) {
-            el.classList.add('active');
-            el.removeAttribute('hidden');
-          } else {
-            el.classList.remove('active');
-            el.setAttribute('hidden', '');
-          }
-        });
-        updateProgress(index);
-      };
-
-      const validateField = (id, errorId, checkFn) => {
-        const field = document.getElementById(id);
-        const wrap = field ? field.closest('.form-field') : null;
-        const errEl = document.getElementById(errorId);
-        const valid = checkFn(field);
-        if (wrap) wrap.classList.toggle('form-field--error', !valid);
-        if (errEl) errEl.style.display = valid ? 'none' : 'block';
-        return valid;
-      };
-
-      document.getElementById('next-1').addEventListener('click', () => {
-        const locValid = validateField('location', 'location-error', (f) => f.value.trim().length > 1);
-        if (locValid) showStep(1);
-      });
-
-      document.getElementById('next-2').addEventListener('click', () => {
-        const budgetSelected = !!document.querySelector('input[name="budget"]:checked');
-        const errEl = document.getElementById('budget-error');
-        if (!budgetSelected) {
-          errEl.style.display = 'block';
-          return;
-        }
-        errEl.style.display = 'none';
-        showStep(2);
-      });
-
-      document.getElementById('back-2').addEventListener('click', () => showStep(0));
-      document.getElementById('back-3').addEventListener('click', () => showStep(1));
-
-      /* ── 6. FORM SUBMISSION ─────────────────────────── */
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const nameValid = validateField('full-name', 'name-error', (f) => f.value.trim().length > 1);
-        const emailValid = validateField('email', 'email-error', (f) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value.trim()));
-
-        if (!nameValid || !emailValid) return;
-
-        const payload = {
-          project_type: document.querySelector('input[name="project_type"]:checked')?.value,
-          location: document.getElementById('location').value,
-          budget: document.querySelector('input[name="budget"]:checked')?.value,
-          name: document.getElementById('full-name').value,
-          phone: document.getElementById('phone').value,
-          email: document.getElementById('email').value,
-          notes: document.getElementById('notes').value,
-          source: 'iron-wood-design-landing',
-          submitted_at: new Date().toISOString(),
-        };
-
-        console.info('[Landscaping] Form payload:', payload);
-
-        // Hide steps and show success
-        steps.forEach(id => {
-          document.getElementById(id).classList.remove('active');
-          document.getElementById(id).setAttribute('hidden', '');
-        });
-        progressBar.hidden = true;
-
-        const successEl = document.getElementById('form-success');
-        successEl.classList.add('visible');
-        successEl.focus();
-      });
-
-      /* ── 7. ANIMATIONS ──────────────────────────────── */
-      const revealEls = document.querySelectorAll('.reveal');
-      if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('revealed');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.12 });
-        revealEls.forEach(el => observer.observe(el));
-      } else {
-        revealEls.forEach(el => el.classList.add('revealed'));
-      }
-
-      /* ── 8. SMOOTH SCROLL ───────────────────────────── */
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', (e) => {
-          const target = document.querySelector(anchor.getAttribute('href'));
-          if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        });
-      });
-
-      /* ── 9. LANGUAGE TOGGLE ─────────────────────────── */
-      const langToggles = document.querySelectorAll('.nav__lang-toggle');
-      langToggles.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const bodyTag = document.body;
-          const textNodes = document.querySelectorAll('.nav__lang-text');
-
-          // Toggle language class on body
-          if (bodyTag.classList.contains('lang-es')) {
-            bodyTag.classList.remove('lang-es');
-            bodyTag.classList.add('lang-en');
-            textNodes.forEach(node => node.textContent = 'EN');
-          } else {
-            bodyTag.classList.remove('lang-en');
-            bodyTag.classList.add('lang-es');
-            textNodes.forEach(node => node.textContent = 'ES');
-          }
-        });
-      });
-
-      // Boot
-      showStep(0);
-
-    })();
-  </script>
-
+  <script src="script.js" defer></script>
 </body>
 
 </html>
